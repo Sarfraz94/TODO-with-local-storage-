@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Todo App | JavaScript</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- Header -->
+        <div class="header">
+            <div>
+                <p class="small-title">JAVASCRIPT PROJECT</p>
+                <h1>My Todo List</h1>
+                <p class="subtitle">Organize your tasks and stay productive.</p>
+            </div>
+
+            <div class="task-icon">
+                ✓
+            </div>
+        </div>
+
+
+        <!-- Add Task -->
+        <div class="input-area">
+
+            <input
+                type="text"
+                id="input"
+                placeholder="What needs to be done?"
+                autocomplete="off"
+            >
+
+            <button id="add" onclick="todo()">
+                <span>+</span> Add Task
+            </button>
+
+            <button
+                style="display: none;"
+                id="edit"
+                onclick="updateTodo()"
+            >
+                ✓ Update Task
+            </button>
+
+        </div>
+
+
+        <!-- Search + Delete All -->
+        <div class="tools">
+
+            <div class="search-box">
+                <span>⌕</span>
+
+                <input
+                    type="search"
+                    placeholder="Search tasks..."
+                    id="search"
+                >
+            </div>
+
+            <button id="deleteAll" class="delete-all">
+                Delete All
+            </button>
+
+        </div>
+
+
+        <!-- Task Heading -->
+        <div class="list-header">
+            <h2>My Tasks</h2>
+            <span id="taskCount">0 tasks</span>
+        </div>
+
+
+        <!-- Todo List -->
+        <ul id="display"></ul>
+
+
+        <!-- Empty State -->
+        <div id="emptyState" class="empty-state">
+            <div class="empty-icon">✓</div>
+            <h3>No tasks yet</h3>
+            <p>Add your first task and start being productive.</p>
+        </div>
+
+    </main>
+
+
+    <footer>
+        Built with HTML, CSS & JavaScript
+    </footer>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
